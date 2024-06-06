@@ -1,0 +1,33 @@
+<html>
+<head>
+			<title> MM App by kamal Sir </title>
+			<style>
+						* {font-size:40px;font-family:Arial;}
+						body { background-color:lightblue;}
+						.btn {background-color:blue; color:white;}
+			</style>
+</head>
+
+<body>
+<center>
+			<h1> Motivational Msg Wallah </h1>
+			<form onsubmit="show()">
+			<input type = "submit" value="Get Msg" class = "btn"/>
+			<br/><br/>
+			<h2 id="msg"/>
+			</form>
+			
+			<script>
+						function show()
+						{
+								event.preventDefault();
+								let msg = document.getElementById("msg");
+								
+								let messages =["m1","m2","m3","m4","m5","m6","m7","m8"];
+							  	let r = parseInt(Math.random() * messages.length);
+								msg.innerHTML = r + "" + messages[r];
+						}
+						</script>
+</center>
+</body>
+</html>
